@@ -5,7 +5,7 @@ import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import InterviewCard from "@/components/InterviewCard";
-import {getCurrentUser} from "@/lib/actions/auth.action";
+import {getCurrentUser} from "@/actions/auth.action";
 import { Interview } from "@/types";
 import { redirect } from 'next/navigation';
 const Page = async () => {

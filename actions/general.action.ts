@@ -1,4 +1,4 @@
-import {db} from "@/firebase/admin";
+import {db} from "@/services/firebase/admin";
 import { Interview, GetLatestInterviewsParams } from "@/types";
 
 export async function getInterviewsByUserId(userId: string): Promise<Interview[] | null> {

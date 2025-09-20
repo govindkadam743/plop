@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import { redirect } from "next/navigation";
 
- import { isAuthenticated } from "@/lib/actions/auth.action";
+ import { isAuthenticated } from "@/actions/auth.action";
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
   // Temporarily disabled auth check for development

@@ -1,7 +1,7 @@
 import {generateText} from "ai";
 import {google} from "@ai-sdk/google";
 import {getRandomInterviewCover} from "@/lib/utils";
-import {db} from "@/firebase/admin";
+import {db} from "@/services/firebase/admin";
 
 export async function GET() {
     return Response.json({ success: true, data: 'THANK YOU!'}, { status: 200 });
@@ -36,6 +36,10 @@ export async function POST(request: Request) {
             finalized: true,
             coverImage: getRandomInterviewCover(),
             createdAt: new Date().toISOString()
+        }
+
+        if (!db) {
+            throw new Error('Database not initialized');
         }
 
         await db.collection("interviews").add(interview);
