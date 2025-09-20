@@ -22,7 +22,7 @@ if (!admin.apps.length) {
 
     admin.initializeApp({
       credential,
-      databaseURL: process.env.FIREBASE_DATABASE_URL,
+      projectId: process.env.FIREBASE_PROJECT_ID,
     });
   } catch (error) {
     console.error('Failed to initialize Firebase Admin:', error);
