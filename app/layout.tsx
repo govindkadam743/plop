@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mona_Sans } from "next/font/google";
 import './globals.css';
 import { Toaster } from "sonner";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const monoSans = Mona_Sans({
   variable: "--font-mono-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster/>
+        <SpeedInsights />
       </body>
     </html>
   );
